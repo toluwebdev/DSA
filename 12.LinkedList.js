@@ -7,8 +7,8 @@
 // f. GetLast Challenge ✅
 //g. Get Challenge ✅
 // g. Set Challenge ✅
-// h. Insert Challenge
-// i. Size Challenge
+// h. Insert Challenge ✅
+// i. Size Challenge✅
 // j. Clear Challenge
 
 class Node {
@@ -119,6 +119,28 @@ class LinkedList {
     if (index === this.length) {
       return this.push(value);
     }
+    let newNode = new Node(value);
+    // Use the get method to find the node before the index
+    let prev = this.get(index - 1);
+
+    newNode.next = prev.next;
+    prev.next = newNode;
+    this.length++;
+    return true;
+  }
+  count() {
+    let temp = this.head;
+    let count = 0;
+    while (temp) {
+      count++;
+      temp = temp.next;
+    }
+    return count;
+  }
+  clear() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
   }
 }
 const myLinkedList = new LinkedList(1);
