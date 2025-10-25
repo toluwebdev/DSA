@@ -7,7 +7,7 @@
 // f. GetLast Challenge ✅
 //g. Get Challenge ✅
 // g. Set Challenge ✅
-// h. Insert Challenge 
+// h. Insert Challenge
 // i. Size Challenge
 // j. Clear Challenge
 
@@ -112,7 +112,14 @@ class LinkedList {
     }
     return false;
   }
-  insert(index)
+  insert(index, value) {
+    if (index === 0) {
+      return this.unshift(value);
+    }
+    if (index === this.length) {
+      return this.push(value);
+    }
+  }
 }
 const myLinkedList = new LinkedList(1);
 myLinkedList.push(2);
