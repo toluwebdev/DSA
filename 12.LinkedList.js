@@ -9,7 +9,7 @@
 // g. Set Challenge ✅
 // h. Insert Challenge ✅
 // i. Size Challenge✅
-// j. Clear Challenge
+// j. Clear Challenge✅
 
 class Node {
   constructor(value) {
